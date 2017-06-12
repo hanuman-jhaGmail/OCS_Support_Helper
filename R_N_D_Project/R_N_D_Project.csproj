@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{21361029-910E-4C9A-8198-0B61F5F0E5BE}</ProjectGuid>
+    <ProjectGuid>{4063E069-3554-49F7-BB2C-32B52906110E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>OCS_Support_Helper</RootNamespace>
-    <AssemblyName>OCS_Support_Helper</AssemblyName>
+    <RootNamespace>R_N_D_Project</RootNamespace>
+    <AssemblyName>R_N_D_Project</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -54,12 +54,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Properties\Strings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Strings.resx</DependentUpon>
+    <Compile Include="ListViewColumnSortingSample.xaml.cs">
+      <DependentUpon>ListViewColumnSortingSample.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
+    <Compile Include="ListViewExample3.xaml.cs">
+      <DependentUpon>ListViewExample3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListViewExample4.xaml.cs">
+      <DependentUpon>ListViewExample4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListViewExample5.xaml.cs">
+      <DependentUpon>ListViewExample5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SortAdorner.cs" />
+    <Compile Include="User.cs" />
+    <Page Include="ListViewColumnSortingSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListViewExample1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -67,24 +80,47 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="ListViewExample1.xaml.cs">
+      <DependentUpon>ListViewExample1.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ListViewExample2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListViewExample3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListViewExample4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListViewExample5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Customer.cs" />
+    <Compile Include="ListViewExample2.xaml.cs">
+      <DependentUpon>ListViewExample2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Properties\Strings.resx">
+    <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -95,7 +131,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Data\customers.xml" />
+    <Content Include="Images\bullet_blue.png" />
+    <Content Include="Images\bullet_green.png" />
+    <Content Include="Images\bullet_red.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
